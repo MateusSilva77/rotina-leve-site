@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotina Leve — 30 dias para organizar sua alimentação</title>
+<meta name="description" content="Guia de 30 dias com receitas, plano alimentar-exemplo, lista de compras e um desafio diário para organizar sua alimentação sem dietas extremas. R$ 14,90.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/@tabler/icons-webfont/3.3.0/tabler-icons.min.css">
+<style>
+  :root{
+    --bg:#12130f;
+    --bg-2:#1a1c15;
+    --panel:#F7F3EA;
+    --panel-2:#EDE7D8;
+    --gold:#C9932F;
+    --gold-bright:#E8B04D;
+    --sage:#8FA888;
+    --cream:#F7F3EA;
+    --ink:#1B1C16;
+    --ink-soft:#5B5A4E;
+    --line:rgba(247,243,234,0.14);
+    --line-dark:rgba(27,28,22,0.12);
+    --radius:14px;
+    font-family:'Inter',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--panel);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-0.01em;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,19,15,0.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:16px;}
+  .logo{font-family:'Fraunces',serif;font-size:19px;color:var(--cream);letter-spacing:0.01em;text-decoration:none;}
+  .logo span{color:var(--gold-bright);}
+  .nav-price{font-size:13px;color:#c9c6ba;display:none;}
+  .nav-price strong{color:var(--gold-bright);font-weight:600;}
+  .btn{
+    display:inline-block;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    padding:12px 24px;
+    border-radius:999px;
+    text-decoration:none;
+    text-align:center;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:none;
+    cursor:pointer;
+  }
+  .btn-gold{background:var(--gold-bright); color:#2A1B03;}
+  .btn-gold:hover{transform:translateY(-1px); box-shadow:0 8px 22px rgba(232,176,77,0.35);}
+  .btn-sm{padding:9px 18px; font-size:13px;}
+
+  .hero{
+    background:radial-gradient(ellipse 900px 500px at 50% -10%, rgba(232,176,77,0.16), transparent 60%), var(--bg);
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .letterbox{height:28px; background:#000;}
+  .hero-inner{
+    max-width:760px; margin:0 auto; padding:72px 24px 56px; text-align:center;
+  }
+  .hero .eyebrow{color:var(--gold-bright); margin-bottom:20px; display:flex; align-items:center; justify-content:center; gap:10px;}
+  .hero .eyebrow::before, .hero .eyebrow::after{content:""; width:28px; height:1px; background:var(--gold-bright); opacity:0.5;}
+  .hero h1{font-size:clamp(32px,5.4vw,52px); line-height:1.15; margin-bottom:18px;}
+  .hero h1 em{font-style:italic; color:var(--gold-bright);}
+  .hero p.sub{font-size:17px; color:#c9c6ba; max-width:540px; margin:0 auto 22px;}
+  .hero-price{
+    display:inline-flex; align-items:baseline; gap:8px;
+    background:rgba(232,176,77,0.12);
+    border:1px solid rgba(232,176,77,0.28);
+    border-radius:999px;
+    padding:8px 16px;
+    margin:0 auto 26px;
+    font-size:14px; color:#c9c6ba;
+  }
+  .hero-price strong{font-family:'Fraunces',serif; font-size:22px; color:var(--gold-bright); font-weight:600;}
+  .hero .cta-row{display:flex; flex-direction:column; align-items:center; gap:12px;}
+  .hero .microcopy{font-size:12.5px; color:#8b8a7e; display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:center;}
+
+  .mockups{
+    display:flex; justify-content:center; align-items:flex-end; gap:14px;
+    margin:48px auto 0; max-width:640px; position:relative;
+  }
+  .spotlight{
+    position:absolute; inset:-80px -40px; background:radial-gradient(circle, rgba(232,176,77,0.2), transparent 65%);
+    z-index:0; pointer-events:none;
+  }
+  .book, .sheet{
+    position:relative; z-index:1;
+    border:1px solid var(--line);
+    background:var(--bg-2);
+  }
+  .book{
+    width:210px; border-radius:8px 14px 14px 8px;
+    padding:22px 18px 20px;
+    text-align:left;
+    box-shadow:12px 16px 40px rgba(0,0,0,0.35);
+    transform:rotate(-2deg);
+  }
+  .book .tag{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--gold-bright); letter-spacing:0.12em;}
+  .book h3{color:var(--cream); font-size:20px; margin:10px 0 8px;}
+  .book p{color:#a9a89c; font-size:12px; line-height:1.5;}
+  .book .spine{position:absolute; left:0; top:0; bottom:0; width:8px; background:linear-gradient(180deg,#C9932F,#8a6a22);}
+  .sheet{
+    width:150px; border-radius:10px; padding:16px 14px;
+    transform:rotate(4deg) translateY(8px);
+  }
+  .sheet .mini{font-family:'IBM Plex Mono',monospace; font-size:9px; color:var(--gold-bright); letter-spacing:0.1em; margin-bottom:8px;}
+  .sheet h4{color:var(--cream); font-size:13px; margin-bottom:10px;}
+  .lines{display:flex; flex-direction:column; gap:6px;}
+  .lines span{display:block; height:6px; background:rgba(247,243,234,0.12); border-radius:4px;}
+  .lines span:nth-child(1){width:92%;}
+  .lines span:nth-child(2){width:74%;}
+  .lines span:nth-child(3){width:86%;}
+  .lines span:nth-child(4){width:60%;}
+  .sheet.alt{display:none;}
+
+  .sprocket{
+    height:20px;
+    background-image:radial-gradient(circle, rgba(247,243,234,0.35) 2px, transparent 2.4px);
+    background-size:22px 20px;
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:var(--bg);
+  }
+  .sprocket.light{background-color:var(--panel); background-image:radial-gradient(circle, rgba(27,28,22,0.18) 2px, transparent 2.4px);}
+
+  section{padding:76px 0;}
+  .section-head{max-width:560px; margin:0 auto 48px; text-align:center;}
+  .section-head .eyebrow{color:var(--gold); margin-bottom:14px;}
+  .section-head h2{font-size:clamp(26px,3.6vw,36px);}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:15.5px;}
+
+  .band-dark{background:var(--bg); color:var(--cream);}
+  .band-dark .section-head p{color:#a9a89c;}
+  .band-dark .section-head .eyebrow{color:var(--gold-bright);}
+
+  .problem-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:900px; margin:0 auto;}
+  .problem-card{background:var(--panel-2); border-radius:var(--radius); padding:26px 22px;}
+  .problem-card i{font-size:22px; color:var(--gold);}
+  .problem-card p{margin-top:12px; font-size:14.5px; color:var(--ink-soft);}
+
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:0; max-width:960px; margin:0 auto; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);}
+  .step{padding:30px 22px; border-right:1px solid var(--line); background:var(--bg-2);}
+  .step:last-child{border-right:none;}
+  .step .num{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--gold-bright); margin-bottom:14px;}
+  .step h4{color:var(--cream); font-size:16px; margin-bottom:8px;}
+  .step p{color:#a9a89c; font-size:13px;}
+
+  .content-list{max-width:760px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .content-item{display:flex; gap:14px; align-items:flex-start; padding:16px; background:var(--panel-2); border-radius:12px;}
+  .content-item i{font-size:19px; color:var(--gold); margin-top:2px; flex-shrink:0;}
+  .content-item h5{font-size:15px; font-weight:600; margin-bottom:3px;}
+  .content-item p{font-size:13px; color:var(--ink-soft);}
+
+  .bonus-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:14px; max-width:1000px; margin:0 auto;}
+  .bonus-card{background:var(--panel-2); border-radius:12px; padding:20px 16px; text-align:center; color:var(--ink);}
+  .bonus-card .num{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold); margin-bottom:10px;}
+  .bonus-card h5{font-size:13.5px; font-weight:600; margin-bottom:6px;}
+  .bonus-card p{font-size:12px; color:var(--ink-soft);}
+
+  .cred-strip{display:flex; justify-content:center; gap:28px; flex-wrap:wrap; max-width:860px; margin:0 auto;}
+  .cred-item{display:flex; align-items:center; gap:8px; font-size:13.5px; color:var(--ink-soft);}
+  .cred-item i{color:var(--gold); font-size:16px;}
+
+  .quotes{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:960px; margin:0 auto;}
+  .quote{
+    background:var(--panel-2); border-radius:14px; padding:22px 20px;
+  }
+  .quote p{font-size:14px; color:var(--ink); margin-bottom:14px;}
+  .quote .who{font-size:12.5px; color:var(--ink-soft); font-weight:600;}
+  .quote .who span{font-weight:400;}
+  .stars{color:var(--gold); font-size:13px; letter-spacing:1px; margin-bottom:8px;}
+
+  .whom-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px; max-width:880px; margin:0 auto;}
+  .whom-card{padding:28px; border-radius:var(--radius);}
+  .whom-yes{background:rgba(143,168,136,0.14); border:1px solid rgba(143,168,136,0.35);}
+  .whom-no{background:rgba(0,0,0,0.03); border:1px solid var(--line-dark);}
+  .whom-card h4{font-size:15px; margin-bottom:14px; display:flex; align-items:center; gap:8px;}
+  .whom-card ul{list-style:none;}
+  .whom-card li{font-size:14px; color:var(--ink-soft); padding:7px 0; display:flex; gap:8px;}
+
+  .safety{max-width:760px; margin:0 auto; background:#FBF0DC; border:1px solid #E8CE96; border-radius:var(--radius); padding:26px 28px; display:flex; gap:16px;}
+  .safety i{font-size:20px; color:#93650F; margin-top:2px;}
+  .safety p{font-size:13.5px; color:#5E4108; line-height:1.65;}
+  .safety strong{color:#3F2C05;}
+
+  .offer-box{max-width:480px; margin:0 auto; background:var(--bg-2); color:var(--cream); border-radius:18px; padding:40px 34px; text-align:center; border:1px solid var(--line);}
+  .offer-box .eyebrow{color:var(--gold-bright); margin-bottom:16px;}
+  .price{font-family:'Fraunces',serif; font-size:48px; margin-bottom:4px; line-height:1;}
+  .price small{font-size:16px; color:#a9a89c; font-family:'Inter',sans-serif;}
+  .stack{text-align:left; margin:22px 0 8px; display:flex; flex-direction:column; gap:8px;}
+  .stack li{list-style:none; font-size:13.5px; color:#c9c6ba; display:flex; gap:8px;}
+  .stack i{color:var(--gold-bright); margin-top:2px;}
+  .offer-box .btn{width:100%; margin-top:22px;}
+  .guarantee-pill{display:inline-flex; align-items:center; gap:8px; margin-top:18px; font-size:12.5px; color:#a9a89c;}
+  .guarantee-pill i{color:var(--sage);}
+
+  .final-cta{text-align:center;}
+  .final-cta h2{font-size:clamp(26px,4vw,38px); margin-bottom:16px;}
+  .final-cta p{color:var(--ink-soft); max-width:460px; margin:0 auto 16px;}
+  .final-cta .price-line{font-size:15px; color:var(--ink); margin-bottom:24px;}
+  .final-cta .price-line strong{color:#3F2C05;}
+
+  .faq{max-width:680px; margin:0 auto;}
+  details{border-bottom:1px solid var(--line-dark); padding:18px 0;}
+  summary{cursor:pointer; list-style:none; font-weight:600; font-size:15px; display:flex; justify-content:space-between; align-items:center; gap:16px;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+"; font-size:20px; color:var(--gold); font-weight:400;}
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px; font-size:14px; color:var(--ink-soft); padding-right:24px;}
+
+  footer{background:var(--bg); color:#8b8a7e; padding:44px 0 30px; font-size:12.5px;}
+  footer .wrap{display:flex; flex-direction:column; gap:14px; text-align:center;}
+  footer .foot-logo{font-family:'Fraunces',serif; color:var(--cream); font-size:16px;}
+
+  @media (min-width: 760px){
+    .nav-price{display:block;}
+    .sheet.alt{display:block;}
+  }
+  @media (max-width: 760px){
+    .problem-grid, .steps, .bonus-grid, .quotes{grid-template-columns:1fr 1fr;}
+    .content-list, .whom-grid{grid-template-columns:1fr;}
+    .step{border-right:none; border-bottom:1px solid var(--line);}
+    .hero-inner{padding:56px 20px 48px;}
+  }
+  @media (max-width: 480px){
+    .problem-grid, .bonus-grid, .quotes{grid-template-columns:1fr;}
+    .mockups{flex-direction:column; align-items:center;}
+    .book, .sheet{transform:none; width:100%; max-width:280px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Rotina <span>Leve</span></a>
+    <div class="nav-price">Acesso completo · <strong>R$ 14,90</strong></div>
+    <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-gold btn-sm">Quero começar</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="letterbox"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">30 dias · hábitos que ficam</div>
+    <h1>Sua alimentação, <em>finalmente</em><br>organizada</h1>
+    <p class="sub">Um método simples de 30 dias para comer melhor, planejar refeições e criar hábitos — sem dietas extremas e sem culpa.</p>
+    <div class="hero-price"><strong>R$ 14,90</strong> pagamento único · e-book + 5 bônus</div>
+    <div class="cta-row">
+      <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-gold">Quero o guia de 30 dias por R$ 14,90 ↗</a>
+      <div class="microcopy">
+        <span><i class="ti ti-lock" aria-hidden="true"></i> Pagamento seguro via Kiwify</span>
+        ·
+        <span>Acesso imediato em PDF</span>
+        ·
+        <span>Garantia de 7 dias</span>
+      </div>
+    </div>
+
+    <div class="mockups">
+      <div class="spotlight"></div>
+      <div class="sheet">
+        <div class="mini">BÔNUS · LISTA</div>
+        <h4>Compras da semana</h4>
+        <div class="lines"><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="book">
+        <div class="spine"></div>
+        <div class="tag">E-BOOK DIGITAL · PDF</div>
+        <h3>Rotina Leve</h3>
+        <p>Guia de 30 dias com receitas, plano alimentar-exemplo, desafio diário e lista de compras pronta.</p>
+      </div>
+      <div class="sheet alt">
+        <div class="mini">BÔNUS · PLANNER</div>
+        <h4>Semana organizada</h4>
+        <div class="lines"><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="letterbox"></div>
+</div>
+
+<div class="sprocket"></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O problema</div>
+      <h2>Você já tentou de tudo — e sempre volta ao início?</h2>
+      <p>Não é falta de força de vontade. É falta de um método simples de seguir no meio da correria do dia a dia.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <i class="ti ti-clock" aria-hidden="true"></i>
+        <p>Rotina corrida deixa pouco espaço para planejar refeições.</p>
+      </div>
+      <div class="problem-card">
+        <i class="ti ti-mood-confuzed" aria-hidden="true"></i>
+        <p>Dietas restritivas funcionam por alguns dias e depois desandam.</p>
+      </div>
+      <div class="problem-card">
+        <i class="ti ti-shopping-cart-off" aria-hidden="true"></i>
+        <p>Compras sem planejamento viram desperdício e escolhas de última hora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket light"></div>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Como funciona</div>
+      <h2>Um método em 4 fases, sem radicalismo</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">FASE 01 · DIAS 1–7</div>
+        <h4>Organização</h4>
+        <p>Ajuste o ambiente, planeje compras e monte sua semana.</p>
+      </div>
+      <div class="step">
+        <div class="num">FASE 02 · DIAS 8–14</div>
+        <h4>Alimentação</h4>
+        <p>Aprenda a montar pratos equilibrados e reconhecer a fome real.</p>
+      </div>
+      <div class="step">
+        <div class="num">FASE 03 · DIAS 15–21</div>
+        <h4>Movimento</h4>
+        <p>Inclua caminhada, mobilidade e exercícios simples na rotina.</p>
+      </div>
+      <div class="step">
+        <div class="num">FASE 04 · DIAS 22–30</div>
+        <h4>Consolidação</h4>
+        <p>Transforme o que funcionou em hábito permanente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">O que você recebe</div>
+      <h2>Tudo pronto, sem enrolação</h2>
+    </div>
+    <div class="content-list">
+      <div class="content-item"><i class="ti ti-book" aria-hidden="true"></i><div><h5>15 capítulos educativos</h5><p>Do "porquê" ao "como fazer", em linguagem simples.</p></div></div>
+      <div class="content-item"><i class="ti ti-salad" aria-hidden="true"></i><div><h5>Plano alimentar-exemplo</h5><p>Modelo de semana com opções e substituições.</p></div></div>
+      <div class="content-item"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i><div><h5>20+ receitas práticas</h5><p>Cafés, almoços, jantares, lanches e sobremesas.</p></div></div>
+      <div class="content-item"><i class="ti ti-shopping-cart" aria-hidden="true"></i><div><h5>Lista de compras pronta</h5><p>Organizada por categoria, com versão semanal.</p></div></div>
+      <div class="content-item"><i class="ti ti-calendar-check" aria-hidden="true"></i><div><h5>Desafio de 30 dias</h5><p>Ação diária, reflexão e espaço para marcar progresso.</p></div></div>
+      <div class="content-item"><i class="ti ti-walk" aria-hidden="true"></i><div><h5>Exercícios para iniciantes</h5><p>Caminhada, mobilidade e força leve, sem riscos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket"></div>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Bônus inclusos</div>
+      <h2>5 materiais extras, prontos para usar</h2>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card"><div class="num">01</div><h5>Planner semanal</h5><p>Organize as refeições da semana</p></div>
+      <div class="bonus-card"><div class="num">02</div><h5>Lista imprimível</h5><p>Compras sem esquecer nada</p></div>
+      <div class="bonus-card"><div class="num">03</div><h5>Calendário 30 dias</h5><p>Acompanhe seu progresso</p></div>
+      <div class="bonus-card"><div class="num">04</div><h5>Receitas rápidas</h5><p>Um cartão por receita</p></div>
+      <div class="bonus-card"><div class="num">05</div><h5>Checklist de hábitos</h5><p>Marque seus hábitos diários</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:44px 0; background:var(--panel-2);">
+  <div class="wrap">
+    <div class="cred-strip">
+      <div class="cred-item"><i class="ti ti-check" aria-hidden="true"></i>Sem dietas restritivas</div>
+      <div class="cred-item"><i class="ti ti-check" aria-hidden="true"></i>Linguagem simples e direta</div>
+      <div class="cred-item"><i class="ti ti-check" aria-hidden="true"></i>Baseado em diretrizes nutricionais gerais</div>
+      <div class="cred-item"><i class="ti ti-check" aria-hidden="true"></i>Sem promessas irreais</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quem já começou</div>
+      <h2>Menos culpa. Mais rotina.</h2>
+      <p>Troque estes textos por depoimentos reais assim que tiver os primeiros leitores.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>“Pela primeira vez eu sei o que comprar no mercado sem improviso no domingo à noite.”</p>
+        <div class="who">Ana, 32 <span>· São Paulo</span></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>“Não é dieta. É organização. Em duas semanas a cozinha parou de ser um caos.”</p>
+        <div class="who">Carla, 41 <span>· Curitiba</span></div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        <p>“O desafio diário é curto. Dá para cumprir mesmo com trabalho e filho.”</p>
+        <div class="who">Juliana, 28 <span>· Recife</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Este guia é para você?</div>
+      <h2>Vamos ser diretos sobre isso</h2>
+    </div>
+    <div class="whom-grid">
+      <div class="whom-card whom-yes">
+        <h4><i class="ti ti-circle-check" style="color:var(--sage);" aria-hidden="true"></i> É para você se</h4>
+        <ul>
+          <li>· Você tem rotina corrida e dificuldade de se organizar</li>
+          <li>· Já tentou dietas restritivas e quer algo sustentável</li>
+          <li>· Quer ideias práticas de refeições e compras</li>
+          <li>· Busca progresso gradual, sem radicalismo</li>
+        </ul>
+      </div>
+      <div class="whom-card whom-no">
+        <h4><i class="ti ti-circle-x" style="color:var(--ink-soft);" aria-hidden="true"></i> Talvez não seja se</h4>
+        <ul>
+          <li>· Você é gestante ou lactante</li>
+          <li>· É menor de idade</li>
+          <li>· Tem doença diagnosticada ou usa medicação contínua</li>
+          <li>· Tem histórico de transtorno alimentar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:0 0 76px;">
+  <div class="wrap">
+    <div class="safety">
+      <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+      <p><strong>Aviso importante:</strong> este material é educativo e não substitui a avaliação de um nutricionista, médico ou outro profissional de saúde. Os resultados variam entre indivíduos. Gestantes, lactantes, menores de idade e pessoas com condições de saúde ou histórico de transtornos alimentares devem buscar orientação profissional antes de seguir o material.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sprocket"></div>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="offer-box">
+      <div class="eyebrow">Acesso completo</div>
+      <div class="price">R$ 14,90 <small>· pagamento único</small></div>
+      <p style="color:#a9a89c; font-size:13.5px; margin-top:8px;">E-book + 5 bônus em PDF. Acesso imediato após o pagamento.</p>
+      <ul class="stack">
+        <li><i class="ti ti-check" aria-hidden="true"></i> Guia de 30 dias (15 capítulos)</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Plano alimentar-exemplo + 20 receitas</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> Lista de compras e desafio diário</li>
+        <li><i class="ti ti-check" aria-hidden="true"></i> 5 bônus para imprimir e usar</li>
+      </ul>
+      <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-gold">Quero garantir meu acesso ↗</a>
+      <div class="guarantee-pill"><i class="ti ti-shield-check" aria-hidden="true"></i> Garantia de 7 dias — Kiwify</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Sua rotina mais leve começa com uma decisão simples</h2>
+    <p>Menos complicação, mais consistência. Você não precisa de perfeição — só de um próximo passo.</p>
+    <p class="price-line">Tudo isso por <strong>R$ 14,90</strong>, uma vez.</p>
+    <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-gold">Quero começar agora ↗</a>
+  </div>
+</section>
+
+<div class="sprocket light"></div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Perguntas frequentes</div>
+      <h2>Antes de decidir</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Isso é uma dieta restritiva?</summary><p>Não. É um guia de organização e hábitos, com opções flexíveis e substituições.</p></details>
+      <details><summary>Vou perder peso garantido?</summary><p>Não existem garantias de resultado. Os resultados dependem de fatores individuais, e o material é um apoio, não uma promessa.</p></details>
+      <details><summary>Preciso de acompanhamento profissional além disso?</summary><p>Recomendamos fortemente, principalmente se você tiver alguma condição de saúde.</p></details>
+      <details><summary>Serve para vegetarianos?</summary><p>Sim, há substituições sugeridas nas receitas e no plano alimentar.</p></details>
+      <details><summary>Funciona para quem já tentou várias dietas antes?</summary><p>Sim — o método foi pensado justamente para quem busca algo mais sustentável do que dietas restritivas.</p></details>
+      <details><summary>Como recebo o material?</summary><p>Em formato digital (PDF), com acesso imediato após a confirmação do pagamento.</p></details>
+      <details><summary>Tem garantia?</summary><p>Sim, garantia de 7 dias processada diretamente pela Kiwify.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Rotina Leve</div>
+    <p>Este material tem caráter educativo e não substitui acompanhamento médico ou nutricional profissional.</p>
+    <p>Pagamento processado com segurança pela Kiwify · suporte@rotinaleve.com.br</p>
+  </div>
+</footer>
+
+</body>
+</html>
