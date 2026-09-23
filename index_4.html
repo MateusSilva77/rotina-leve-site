@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotina Leve — Guia de 30 dias para organizar sua alimentação</title>
+<meta name="description" content="Guia de 30 dias com cardápio-exemplo, 20+ receitas, lista de compras e desafio diário para organizar sua alimentação sem dietas extremas. R$ 14,90, acesso imediato.">
+<meta name="theme-color" content="#1F3D2B">
+
+<!-- Pré-visualização ao compartilhar o link (Pinterest, WhatsApp etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rotina Leve — Sua alimentação, finalmente organizada">
+<meta property="og:description" content="Guia de 30 dias + 5 bônus. Cardápio-exemplo, receitas e lista de compras. R$ 14,90.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231F3D2B'/%3E%3Cpath d='M9 21c0-7 5-12 14-12 0 9-5 14-12 14l-2-2z' fill='%237DB36B'/%3E%3Cpath d='M10 22c3-4 6-7 10-9' stroke='%231F3D2B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/@tabler/icons-webfont/3.3.0/tabler-icons.min.css">
+
+<style>
+  :root{
+    --green-900:#17301F;
+    --green-800:#1F3D2B;
+    --green-700:#2B5539;
+    --green-500:#4F8A55;
+    --leaf:#7DB36B;
+    --leaf-soft:#E4EFDC;
+    --cream:#FBF8F1;
+    --sand:#F3ECDD;
+    --sand-2:#E9E0CC;
+    --ink:#1D2A21;
+    --ink-soft:#56615A;
+    --line:rgba(29,42,33,.12);
+    --cta:#2F6B43;
+    --cta-hover:#24573A;
+    --gold:#E7B24C;
+    --radius:18px;
+    --shadow:0 18px 50px -20px rgba(23,48,31,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;letter-spacing:-.015em;line-height:1.15}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  .hand{font-family:'Caveat',cursive;font-weight:600}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-500)}
+  .eyebrow i{font-size:16px}
+
+  /* ---------- Botões ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:16px;padding:17px 30px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;text-align:center;line-height:1.25}
+  .btn-cta{background:var(--cta);color:#fff;box-shadow:0 10px 26px -10px rgba(47,107,67,.55)}
+  .btn-cta:hover{background:var(--cta-hover);transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(47,107,67,.6)}
+  .btn-cta i{font-size:20px}
+  .btn-sm{padding:10px 18px;font-size:14px}
+  .btn-block{width:100%}
+
+  /* ---------- Barra de topo ---------- */
+  .topbar{background:var(--green-900);color:#DDE8D6;font-size:13px;text-align:center;padding:8px 16px}
+  .topbar strong{color:#fff}
+  header{position:sticky;top:0;z-index:40;background:rgba(251,248,241,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Fraunces',serif;font-weight:600;font-size:21px;color:var(--green-800)}
+  .logo em{font-style:italic;color:var(--green-500)}
+  .logo svg{width:34px;height:34px}
+  .head-right{display:flex;align-items:center;gap:16px}
+  .head-price{font-size:14px;color:var(--ink-soft);display:none}
+  .head-price strong{color:var(--green-800)}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;overflow:hidden;padding:56px 0 72px;background:
+      radial-gradient(700px 420px at 85% 10%, rgba(125,179,107,.22), transparent 70%),
+      radial-gradient(600px 380px at 0% 100%, rgba(231,178,76,.14), transparent 70%),
+      var(--cream)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(36px,5.6vw,60px);margin:16px 0 18px;color:var(--green-900)}
+  .hero h1 em{font-style:italic;color:var(--green-500);position:relative;white-space:nowrap}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.02em;height:.28em;background:rgba(125,179,107,.35);border-radius:4px;z-index:-1}
+  .hero .sub{font-size:18px;color:var(--ink-soft);max-width:520px;margin-bottom:26px}
+  .hero-list{list-style:none;display:grid;gap:10px;margin-bottom:30px}
+  .hero-list li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px;font-weight:500}
+  .hero-list i{color:var(--green-500);font-size:20px;flex-shrink:0;margin-top:1px}
+  .buy-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .price-tag{display:flex;flex-direction:column;line-height:1.1}
+  .price-tag small{font-size:12.5px;color:var(--ink-soft);font-weight:500}
+  .price-tag strong{font-family:'Fraunces',serif;font-size:34px;color:var(--green-800)}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font-size:13px;color:var(--ink-soft)}
+  .trust span{display:inline-flex;align-items:center;gap:6px}
+  .trust i{color:var(--green-500);font-size:16px}
+
+  /* Mockup do e-book (feito em CSS, sem imagem) */
+  .mock{position:relative;height:500px;display:flex;align-items:center;justify-content:center}
+  .blob{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#CFE4C3,#9CC98A 60%,#7DB36B);opacity:.55;filter:blur(2px)}
+  .cover{position:relative;z-index:3;width:270px;height:380px;border-radius:6px 16px 16px 6px;background:linear-gradient(160deg,#24472F 0%,#17301F 100%);color:#fff;padding:28px 24px 24px 34px;box-shadow:var(--shadow),inset 10px 0 0 rgba(0,0,0,.18);transform:rotate(-3deg);display:flex;flex-direction:column}
+  .cover::before{content:"";position:absolute;left:10px;top:0;bottom:0;width:2px;background:rgba(255,255,255,.12)}
+  .cover .c-tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);font-weight:700}
+  .cover h3{font-size:40px;margin:14px 0 6px;line-height:1}
+  .cover h3 em{display:block;font-style:italic;color:var(--leaf)}
+  .cover .c-sub{font-size:13px;color:#C9D8C1;line-height:1.45}
+  .cover .c-plate{margin:auto auto 8px;width:140px;height:140px}
+  .cover .c-foot{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#C9D8C1;border-top:1px solid rgba(255,255,255,.14);padding-top:10px}
+  .cover .c-badge{background:var(--gold);color:#3A2705;font-weight:700;border-radius:999px;padding:3px 10px;font-size:11px}
+  .page{position:absolute;z-index:2;background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:16px}
+  .page h5{font-family:'Fraunces',serif;font-size:14px;color:var(--green-800);margin-bottom:10px}
+  .page .tiny{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green-500);font-weight:700;margin-bottom:4px}
+  .page-a{width:190px;left:0;top:40px;transform:rotate(-8deg)}
+  .page-b{width:190px;right:0;bottom:40px;transform:rotate(7deg)}
+  .check-row{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--ink-soft);padding:4px 0}
+  .box{width:13px;height:13px;border:1.5px solid var(--green-500);border-radius:4px;flex-shrink:0;display:grid;place-items:center}
+  .box.on{background:var(--green-500)}
+  .box.on::after{content:"";width:6px;height:3px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+  .sticker{position:absolute;z-index:4;right:24px;top:18px;width:104px;height:104px;border-radius:50%;background:var(--gold);color:#3A2705;display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 10px 24px -10px rgba(0,0,0,.35);font-weight:700;font-size:12px;line-height:1.15}
+  .sticker b{display:block;font-family:'Fraunces',serif;font-size:24px}
+  .note{position:absolute;z-index:4;left:20px;bottom:-6px;font-size:26px;color:var(--green-700);transform:rotate(-6deg)}
+  .note i{font-size:22px;vertical-align:middle}
+
+  /* ---------- Faixa de benefícios ---------- */
+  .strip{background:var(--green-800);color:#E6EFE0}
+  .strip .wrap{display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px 28px;padding-top:20px;padding-bottom:20px}
+  .strip span{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:500}
+  .strip i{color:var(--leaf);font-size:20px}
+
+  /* ---------- Seções ---------- */
+  section{padding:88px 0}
+  .head{max-width:640px;margin:0 auto 52px;text-align:center}
+  .head h2{font-size:clamp(28px,4vw,42px);margin-top:12px;color:var(--green-900)}
+  .head h2 em{font-style:italic;color:var(--green-500)}
+  .head p{margin-top:14px;color:var(--ink-soft);font-size:17px}
+  .bg-sand{background:var(--sand)}
+  .bg-dark{background:var(--green-900);color:#E6EFE0}
+  .bg-dark .head h2{color:#fff}
+  .bg-dark .head h2 em{color:var(--leaf)}
+  .bg-dark .head p{color:#B9CBB1}
+  .bg-dark .eyebrow{color:var(--leaf)}
+
+  /* Problema */
+  .pain{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pain-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px}
+  .pain-card .ic{width:48px;height:48px;border-radius:14px;background:#F6EBDD;color:#A8743A;display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+  .pain-card h4{font-size:19px;margin-bottom:6px}
+  .pain-card p{color:var(--ink-soft);font-size:15px}
+  .turn{margin:44px auto 0;max-width:720px;text-align:center;font-size:19px;color:var(--green-800)}
+  .turn .hand{font-size:30px;color:var(--green-500);display:block;margin-bottom:4px}
+
+  /* Método */
+  .phases{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}
+  .phases::before{content:"";position:absolute;top:30px;left:12%;right:12%;height:2px;background:repeating-linear-gradient(90deg,rgba(125,179,107,.6) 0 8px,transparent 8px 16px)}
+  .phase{position:relative;text-align:center;padding:0 8px}
+  .phase .dot{width:60px;height:60px;margin:0 auto 18px;border-radius:50%;background:var(--green-700);border:2px solid var(--leaf);display:grid;place-items:center;font-size:26px;color:#fff;position:relative;z-index:1}
+  .phase .days{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);font-weight:700}
+  .phase h4{color:#fff;font-size:21px;margin:6px 0 8px}
+  .phase p{color:#B9CBB1;font-size:14.5px}
+
+  /* Conteúdo */
+  .items{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;transition:transform .2s ease,box-shadow .2s ease}
+  .item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .item .ic{width:46px;height:46px;border-radius:14px;background:var(--leaf-soft);color:var(--green-700);display:grid;place-items:center;font-size:23px;margin-bottom:14px}
+  .item h4{font-size:18px;margin-bottom:6px}
+  .item p{color:var(--ink-soft);font-size:14.5px}
+
+  /* Espiada no conteúdo */
+  .peek{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;align-items:start}
+  .sheet{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:22px;border-top:6px solid var(--green-500)}
+  .sheet .s-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+  .sheet .s-label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green-500)}
+  .sheet .s-pill{font-size:11px;background:var(--leaf-soft);color:var(--green-700);padding:3px 10px;border-radius:999px;font-weight:600}
+  .sheet h4{font-size:21px;margin-bottom:14px;color:var(--green-900)}
+  .meal{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:10px 0;border-top:1px dashed var(--line)}
+  .meal:first-of-type{border-top:0}
+  .meal .m-ic{width:34px;height:34px;border-radius:10px;background:var(--sand);display:grid;place-items:center;color:var(--green-700);font-size:18px}
+  .meal b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--green-700)}
+  .meal span{font-size:14px;color:var(--ink-soft)}
+  .recipe-meta{display:flex;gap:14px;font-size:12.5px;color:var(--ink-soft);margin-bottom:12px}
+  .recipe-meta span{display:inline-flex;align-items:center;gap:4px}
+  .recipe-meta i{color:var(--green-500)}
+  .sheet ul{list-style:none}
+  .sheet ul li{font-size:14px;color:var(--ink-soft);padding:5px 0 5px 18px;position:relative}
+  .sheet ul li::before{content:"";position:absolute;left:2px;top:13px;width:6px;height:6px;border-radius:50%;background:var(--leaf)}
+  .sheet .check-row{font-size:14px;padding:7px 0}
+  .sheet .box{width:17px;height:17px}
+  .sheet .box.on::after{width:8px;height:4px}
+  .progress{margin-top:14px;height:8px;background:var(--sand);border-radius:999px;overflow:hidden}
+  .progress span{display:block;height:100%;width:40%;background:linear-gradient(90deg,var(--green-500),var(--leaf));border-radius:999px}
+  .peek-note{text-align:center;margin-top:26px;font-size:13.5px;color:var(--ink-soft)}
+
+  /* Bônus */
+  .bonus{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .b-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:24px 18px;text-align:center;position:relative}
+  .b-card .b-num{position:absolute;top:12px;right:14px;font-size:11px;color:var(--leaf);font-weight:700;letter-spacing:.1em}
+  .b-card .ic{width:52px;height:52px;margin:0 auto 14px;border-radius:50%;background:rgba(125,179,107,.18);color:var(--leaf);display:grid;place-items:center;font-size:25px}
+  .b-card h4{color:#fff;font-size:17px;margin-bottom:6px}
+  .b-card p{color:#B9CBB1;font-size:13.5px}
+
+  /* Para quem */
+  .fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:920px;margin:0 auto}
+  .fit-card{border-radius:var(--radius);padding:30px 28px}
+  .fit-yes{background:var(--leaf-soft);border:1px solid rgba(79,138,85,.3)}
+  .fit-no{background:#fff;border:1px solid var(--line)}
+  .fit-card h4{font-size:21px;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .fit-yes h4 i{color:var(--green-500)}
+  .fit-no h4 i{color:var(--ink-soft)}
+  .fit-card ul{list-style:none;display:grid;gap:12px}
+  .fit-card li{display:flex;gap:10px;font-size:15px;color:var(--ink-soft)}
+  .fit-card li i{flex-shrink:0;margin-top:3px}
+  .fit-yes li i{color:var(--green-500)}
+  .fit-no li i{color:#A3A89F}
+
+  /* Oferta */
+  .offer{max-width:520px;margin:0 auto;background:#fff;border-radius:24px;box-shadow:0 30px 70px -30px rgba(23,48,31,.45);overflow:hidden;border:1px solid var(--line)}
+  .offer-top{background:var(--green-800);color:#fff;text-align:center;padding:22px}
+  .offer-top h3{font-size:24px}
+  .offer-top p{color:#B9CBB1;font-size:14px;margin-top:4px}
+  .offer-body{padding:30px 32px 32px}
+  .stack{list-style:none;display:grid;gap:12px;margin-bottom:26px}
+  .stack li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+  .stack li i{color:var(--green-500);font-size:20px;flex-shrink:0}
+  .stack li small{display:block;color:var(--ink-soft);font-size:13px}
+  .price-box{text-align:center;border-top:1px dashed var(--line);padding-top:22px;margin-bottom:20px}
+  .price-box .lbl{font-size:13px;color:var(--ink-soft)}
+  .price-box .big{font-family:'Fraunces',serif;font-weight:700;font-size:58px;color:var(--green-900);line-height:1.05}
+  .price-box .big sup{font-size:22px;vertical-align:28px;margin-right:4px}
+  .price-box .per{font-size:14px;color:var(--ink-soft)}
+  .pay-icons{display:flex;justify-content:center;gap:16px;margin-top:16px;font-size:13px;color:var(--ink-soft);flex-wrap:wrap}
+  .pay-icons span{display:inline-flex;align-items:center;gap:6px}
+  .pay-icons i{font-size:18px;color:var(--green-700)}
+
+  .guarantee{max-width:720px;margin:48px auto 0;display:flex;gap:24px;align-items:center;background:var(--sand);border-radius:var(--radius);padding:26px 28px}
+  .seal{flex-shrink:0;width:96px;height:96px;border-radius:50%;background:var(--green-800);color:#fff;display:grid;place-items:center;text-align:center;border:4px solid var(--leaf);box-shadow:0 0 0 4px var(--sand),0 0 0 6px rgba(79,138,85,.35)}
+  .seal b{display:block;font-family:'Fraunces',serif;font-size:30px;line-height:1}
+  .seal small{display:block;font-size:9.5px;letter-spacing:.06em;line-height:1.3;text-transform:uppercase;margin-top:2px}
+  .guarantee h4{font-size:20px;margin-bottom:4px}
+  .guarantee p{color:var(--ink-soft);font-size:15px}
+
+  /* FAQ */
+  .faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
+  details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:0 22px;transition:box-shadow .2s ease}
+  details[open]{box-shadow:0 10px 30px -18px rgba(23,48,31,.35)}
+  summary{cursor:pointer;list-style:none;font-weight:600;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--leaf-soft);color:var(--green-700);display:grid;place-items:center;font-size:18px;font-weight:500;transition:transform .2s ease}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 20px;color:var(--ink-soft);font-size:15px}
+
+  /* CTA final */
+  .final{text-align:center;background:
+      radial-gradient(600px 300px at 50% 0%, rgba(125,179,107,.25), transparent 70%), var(--green-900);color:#fff}
+  .final h2{font-size:clamp(30px,4.4vw,46px);max-width:720px;margin:0 auto 16px}
+  .final h2 em{font-style:italic;color:var(--leaf)}
+  .final p{color:#B9CBB1;max-width:520px;margin:0 auto 30px;font-size:17px}
+  .final .trust{justify-content:center;color:#B9CBB1}
+  .final .trust i{color:var(--leaf)}
+
+  /* Aviso */
+  .safety{max-width:860px;margin:0 auto;display:flex;gap:14px;background:#FFF7E6;border:1px solid #EFD9A6;border-radius:14px;padding:20px 22px}
+  .safety i{color:#9A6B0E;font-size:22px;flex-shrink:0}
+  .safety p{font-size:13.5px;color:#5E4608;line-height:1.65}
+
+  footer{background:var(--green-900);color:#8FA58A;padding:40px 0 110px;font-size:13px;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
+  footer .logo{justify-content:center;color:#fff;margin-bottom:12px}
+  footer .logo em{color:var(--leaf)}
+  footer p{margin-top:6px}
+
+  /* Barra fixa no celular */
+  .mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);box-shadow:0 -10px 30px -12px rgba(0,0,0,.2);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;transform:translateY(110%);transition:transform .3s ease}
+  .mbar.show{transform:none}
+  .mbar .mp{line-height:1.15}
+  .mbar .mp small{display:block;font-size:11.5px;color:var(--ink-soft)}
+  .mbar .mp strong{font-family:'Fraunces',serif;font-size:22px;color:var(--green-800)}
+  .mbar .btn{flex:1;padding:14px 18px;font-size:15px}
+
+  /* Animação de entrada */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn,.item{transition:none}
+  }
+
+
+  /* ===== Vida: fotos e animações ===== */
+  .blob{background:url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=75') center/cover no-repeat;opacity:1;filter:none;border:10px solid #fff;box-shadow:var(--shadow)}
+  .blob::after{content:"";position:absolute;inset:-26px;border-radius:50%;border:2px dashed rgba(79,138,85,.35)}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @keyframes floatA{0%,100%{translate:0 0}50%{translate:0 -12px}}
+  @keyframes floatB{0%,100%{translate:0 0}50%{translate:0 10px}}
+  .cover{animation:floatA 9s ease-in-out infinite}
+  .page-a{animation:floatB 11s ease-in-out infinite}
+  .page-b{animation:floatA 12s ease-in-out infinite 1s}
+  .sticker{}
+  @keyframes pop{0%,100%{transform:rotate(10deg) scale(1)}50%{transform:rotate(4deg) scale(1.07)}}
+  .btn-cta{position:relative;overflow:hidden}
+  .btn-cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:none}
+  @keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+
+  /* Faixa rolando */
+  .strip{overflow:hidden}
+  .marquee{display:flex;width:max-content;animation:marq 55s linear infinite}
+  .marquee .group{display:flex;gap:44px;padding:18px 22px}
+  .strip:hover .marquee{animation-play-state:paused}
+  @keyframes marq{to{transform:translateX(-50%)}}
+
+  /* Galeria de fotos */
+  .gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:230px 230px;gap:16px}
+  .ph{position:relative;border-radius:22px;overflow:hidden;background:var(--sand-2)}
+  .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+  .ph:hover img{transform:scale(1.07)}
+  .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(23,48,31,.75))}
+  .ph figcaption{position:absolute;left:18px;bottom:16px;right:18px;z-index:1;color:#fff;font-weight:600;font-size:15px;display:flex;align-items:center;gap:8px}
+  .ph figcaption i{background:rgba(255,255,255,.2);backdrop-filter:blur(6px);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:16px}
+  .ph.big{grid-row:1/3}
+  .ph.wide{grid-column:2/4}
+  .gal-note{display:flex;justify-content:center;margin-top:28px}
+  .gal-note .hand{font-size:28px;color:var(--green-500)}
+
+  /* Foto na receita */
+  .r-photo{margin:-22px -22px 16px;height:150px;border-radius:10px 10px 0 0;overflow:hidden}
+  .r-photo img{width:100%;height:100%;object-fit:cover}
+
+  /* CTA final com foto */
+  .final{background:linear-gradient(180deg,rgba(23,48,31,.88),rgba(23,48,31,.94)),url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=75') center/cover no-repeat}
+
+  @media (max-width:900px){
+    .gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+    .ph.big{grid-row:auto;grid-column:1/3}
+    .ph.wide{grid-column:1/3}
+  }
+  @media (max-width:640px){
+    .gallery{grid-template-rows:180px 150px 150px 170px;gap:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .blob,.blob::after,.cover,.page-a,.page-b,.sticker,.marquee,.btn-cta::after{animation:none}
+  }
+
+
+  /* ===== Segurança e tranquilidade ===== */
+  .reassure{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-top:12px;font-size:13px;color:var(--ink-soft)}
+  .reassure span{display:inline-flex;align-items:center;gap:5px}
+  .reassure i{color:var(--green-500);font-size:15px}
+  .calm-note{display:flex;gap:12px;align-items:flex-start;background:var(--leaf-soft);border:1px solid rgba(79,138,85,.25);border-radius:14px;padding:14px 16px;margin-top:22px;max-width:520px}
+  .calm-note i{font-size:22px;color:var(--green-700);flex-shrink:0}
+  .calm-note p{font-size:14px;color:var(--green-800);line-height:1.5}
+  .safe-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .safe-step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;position:relative}
+  .safe-step .n{position:absolute;top:-14px;left:24px;background:var(--green-800);color:#fff;font-weight:700;font-size:13px;border-radius:999px;padding:4px 12px}
+  .safe-step .ic{width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--green-700);display:grid;place-items:center;font-size:26px;margin:6px 0 14px}
+  .safe-step h4{font-size:19px;margin-bottom:6px}
+  .safe-step p{color:var(--ink-soft);font-size:14.5px}
+  .shield-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+  .shield{display:flex;gap:12px;align-items:flex-start;padding:18px;border-radius:14px;background:var(--sand)}
+  .shield i{font-size:24px;color:var(--green-700);flex-shrink:0}
+  .shield b{display:block;font-size:14.5px}
+  .shield span{font-size:13px;color:var(--ink-soft)}
+  .refund{max-width:900px;margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:26px;padding:40px;box-shadow:0 24px 60px -34px rgba(23,48,31,.4)}
+  .refund .seal{width:150px;height:150px;border-width:5px}
+  .refund .seal b{font-size:52px}
+  .refund .seal small{font-size:11px}
+  .refund h3{font-size:clamp(24px,3vw,32px);color:var(--green-900);margin-bottom:10px}
+  .refund h3 em{font-style:italic;color:var(--green-500)}
+  .refund .lead{color:var(--ink-soft);font-size:16px;margin-bottom:18px}
+  .refund ol{list-style:none;counter-reset:r;display:grid;gap:10px}
+  .refund ol li{counter-increment:r;display:flex;gap:12px;align-items:flex-start;font-size:15px}
+  .refund ol li::before{content:counter(r);flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--leaf-soft);color:var(--green-700);font-weight:700;font-size:13px;display:grid;place-items:center}
+  .refund .promise{margin-top:18px;font-family:'Caveat',cursive;font-size:26px;color:var(--green-700)}
+  .human{max-width:760px;margin:0 auto;text-align:center}
+  .human .avatar{width:76px;height:76px;margin:0 auto 16px;border-radius:50%;background:var(--green-800);display:grid;place-items:center;border:4px solid var(--leaf-soft)}
+  .human .avatar i{font-size:34px;color:var(--leaf)}
+  .human h3{font-size:clamp(24px,3vw,30px);color:var(--green-900);margin-bottom:10px}
+  .human p{color:var(--ink-soft);font-size:16px}
+  .human .mail{display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 22px;font-weight:600;color:var(--green-800);text-decoration:none;transition:border-color .2s;word-break:break-all}
+  .human .mail:hover{border-color:var(--green-500)}
+  .human .mail i{font-size:20px;color:var(--green-500)}
+  @media (max-width:900px){
+    .safe-steps{grid-template-columns:1fr;gap:26px}
+    .shield-grid{grid-template-columns:1fr 1fr}
+    .refund{grid-template-columns:1fr;text-align:center;padding:32px 24px;gap:22px}
+    .refund .seal{margin:0 auto}
+    .refund ol{text-align:left}
+  }
+  @media (max-width:520px){ .shield-grid{grid-template-columns:1fr} .human .mail{font-size:14px;padding:12px 16px} }
+
+
+  /* ===== Detalhes premium ===== */
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.28 0 0 0 0 0.18 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  .hero h1 em::after{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M3 9C40 3 68 13 100 7s62-5 97 1' stroke='%237DB36B' stroke-width='4.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/100% 100% no-repeat;height:.3em;bottom:-.08em;border-radius:0;z-index:0}
+  .head::after{content:"";display:block;width:110px;height:16px;margin:20px auto 0;background:var(--green-500);opacity:.7;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 16'%3E%3Cpath d='M4 8h34M72 8h34' stroke='black' stroke-width='1.4' stroke-linecap='round'/%3E%3Ccircle cx='4' cy='8' r='1.6'/%3E%3Ccircle cx='106' cy='8' r='1.6'/%3E%3Cpath d='M55 1.5c-7 3.5-8.5 9.5 0 13 8.5-3.5 7-9.5 0-13z'/%3E%3Cpath d='M44 8c3-4 6-5 9-4-2 3-5 4.5-9 4zM66 8c-3-4-6-5-9-4 2 3 5 4.5 9 4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 110 16'%3E%3Cpath d='M4 8h34M72 8h34' stroke='black' stroke-width='1.4' stroke-linecap='round'/%3E%3Ccircle cx='4' cy='8' r='1.6'/%3E%3Ccircle cx='106' cy='8' r='1.6'/%3E%3Cpath d='M55 1.5c-7 3.5-8.5 9.5 0 13 8.5-3.5 7-9.5 0-13z'/%3E%3Cpath d='M44 8c3-4 6-5 9-4-2 3-5 4.5-9 4zM66 8c-3-4-6-5-9-4 2 3 5 4.5 9 4z'/%3E%3C/svg%3E") center/contain no-repeat}
+  .bg-dark .head::after{background:var(--leaf)}
+
+  .wave{display:block;line-height:0;margin:-1px 0}
+  .wave svg{width:100%;height:64px;display:block}
+  .wave.flip svg{transform:scaleY(-1)}
+
+  section,.hero{position:relative}
+  .deco{position:absolute;pointer-events:none;color:var(--leaf);z-index:0}
+  .deco use{fill:currentColor}
+  .hero .wrap,.final .wrap,.bg-dark .wrap,section .wrap{position:relative;z-index:1}
+  .deco-hero-l{width:120px;height:200px;left:-28px;top:40px;transform:rotate(-24deg);opacity:.35}
+  .deco-hero-r{width:90px;height:150px;right:2%;bottom:-20px;transform:rotate(28deg) scaleX(-1);opacity:.3}
+  .deco-prob{width:100px;height:170px;right:4%;top:60px;transform:rotate(18deg);opacity:.22;color:var(--green-500)}
+  .deco-final-l{width:130px;height:220px;left:3%;bottom:10px;transform:rotate(-16deg);opacity:.25}
+  .deco-final-r{width:130px;height:220px;right:3%;top:10px;transform:rotate(164deg);opacity:.2}
+  .deco-offer{width:110px;height:180px;left:6%;top:40px;transform:rotate(-20deg);opacity:.3;color:var(--green-500)}
+  .deco-faq{width:90px;height:150px;left:3%;top:90px;transform:rotate(-10deg);opacity:.18;color:var(--green-500)}
+
+  .item .ic,.safe-step .ic,.pain-card .ic{box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 16px -10px rgba(43,85,57,.55)}
+  .item .ic,.safe-step .ic{background:linear-gradient(150deg,#F1F7EC,#D5E6C9)}
+  .pain-card .ic{background:linear-gradient(150deg,#FBF3E8,#EFDDC4)}
+  .item,.pain-card,.safe-step,.fit-card,.sheet,details{box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 14px 34px -28px rgba(23,48,31,.45)}
+  .item:hover,.safe-step:hover,.pain-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(23,48,31,.45)}
+  .pain-card,.safe-step{transition:transform .25s ease,box-shadow .25s ease}
+  .b-card{background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));transition:transform .25s ease,border-color .25s ease}
+  .b-card:hover{transform:translateY(-4px);border-color:rgba(125,179,107,.5)}
+  .offer{position:relative}
+  .offer::before{content:"";position:absolute;inset:0;border-radius:24px;padding:1.5px;background:linear-gradient(160deg,var(--leaf),transparent 40%,transparent 60%,var(--gold));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .offer-top{background:linear-gradient(135deg,var(--green-700),var(--green-900))}
+  .seal{background:radial-gradient(circle at 35% 30%,var(--green-700),var(--green-900))}
+  .ph{box-shadow:0 20px 40px -26px rgba(23,48,31,.55)}
+  @media (max-width:640px){
+    .wave svg{height:38px}
+    .deco-hero-r,.deco-final-r,.deco-faq,.deco-prob{display:none}
+    .deco-hero-l{width:70px;height:115px;left:-34px;top:-6px;opacity:.25}
+  }
+
+  /* ---------- Responsivo ---------- */
+  @media (min-width:900px){
+    .head-price{display:block}
+    .mbar{display:none}
+    footer{padding-bottom:40px}
+  }
+  @media (max-width:980px){
+    .bonus{grid-template-columns:repeat(3,1fr)}
+    .peek{grid-template-columns:1fr 1fr}
+    .peek .sheet:first-child{grid-column:1/-1}
+  }
+  @media (max-width:900px){
+    .hero{padding:36px 0 56px}
+    .hero-grid{grid-template-columns:1fr;gap:20px}
+    .mock{height:440px;order:2}
+    .items{grid-template-columns:1fr 1fr}
+    .phases{grid-template-columns:1fr 1fr;gap:36px 18px}
+    .phases::before{display:none}
+  }
+  @media (max-width:640px){
+    section{padding:64px 0}
+    .head{margin-bottom:36px}
+    .hero .sub{font-size:16.5px}
+    .buy-row{flex-direction:column;align-items:stretch;gap:14px}
+    .buy-row .btn{width:100%}
+    .price-tag{flex-direction:row;align-items:baseline;gap:10px;justify-content:center}
+    .trust{justify-content:center}
+    .pain,.items,.fit,.peek{grid-template-columns:1fr}
+    .bonus{grid-template-columns:1fr 1fr}
+    .mock{height:400px;transform:scale(.88)}
+    .blob{width:320px;height:320px}
+    .page-a{left:-8px}
+    .page-b{right:-8px}
+    .strip .wrap{justify-content:flex-start;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .strip span{font-size:13.5px}
+    .guarantee{flex-direction:column;text-align:center}
+    .offer-body{padding:24px 22px 26px}
+    .head-right .btn{display:none}
+    .note{display:none}
+    .topbar .tb-long{display:none}
+  }
+  @media (max-width:380px){
+    .bonus{grid-template-columns:1fr}
+    .hero h1 em{white-space:normal}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="branch" viewBox="0 0 120 200">
+  <path d="M60 196C57 140 64 80 58 8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M60 180C38 178 24 164 20 148c20 2 36 14 40 32z"/>
+  <path d="M59 150c24-5 39-22 41-40-20 2-37 18-41 40z" opacity=".85"/>
+  <path d="M59 120c-21-6-33-22-34-38 18 3 31 18 34 38z"/>
+  <path d="M59 90c21-6 32-21 33-36-18 3-30 17-33 36z" opacity=".85"/>
+  <path d="M59 62c-18-5-28-18-29-31 16 3 26 15 29 31z"/>
+  <path d="M58 40c16-6 24-17 24-29-14 3-22 13-24 29z" opacity=".85"/>
+  <path d="M58 8c-7 7-7 17 0 24 7-7 7-17 0-24z"/>
+</symbol></defs></svg>
+
+<div class="topbar"><i class="ti ti-shield-check" aria-hidden="true"></i> <strong>Compra protegida</strong><span class="tb-long"> · Garantia de 7 dias · Sem mensalidade</span></div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#topo" aria-label="Rotina Leve, início">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1F3D2B"/><path d="M9 21c0-7 5-12 14-12 0 9-5 14-12 14l-2-2z" fill="#7DB36B"/><path d="M10 22c3-4 6-7 10-9" stroke="#1F3D2B" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      Rotina <em>Leve</em>
+    </a>
+    <div class="head-right">
+      <div class="head-price">Acesso completo por <strong>R$ 14,90</strong></div>
+      <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-cta btn-sm checkout">Quero o guia</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="topo">
+  <svg class="deco deco-hero-l" aria-hidden="true"><use href="#branch"/></svg>
+  <svg class="deco deco-hero-r" aria-hidden="true"><use href="#branch"/></svg>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i class="ti ti-leaf" aria-hidden="true"></i> Guia de 30 dias · sem dieta maluca</span>
+      <h1>Sua alimentação, <em>finalmente</em> organizada.</h1>
+      <p class="sub">Um passo a passo simples para planejar refeições, fazer compras sem desperdício e criar hábitos que cabem na sua rotina corrida.</p>
+      <ul class="hero-list">
+        <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i> Cardápio-exemplo com substituições fáceis</li>
+        <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i> Mais de 20 receitas práticas e baratas</li>
+        <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i> Lista de compras pronta e desafio diário</li>
+      </ul>
+      <div class="buy-row">
+        <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-cta checkout">Quero começar hoje <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        <div class="price-tag"><small>Pagamento único</small><strong>R$ 14,90</strong></div>
+      </div>
+      <div class="trust">
+        <span><i class="ti ti-lock" aria-hidden="true"></i> Compra segura via Kiwify</span>
+        <span><i class="ti ti-download" aria-hidden="true"></i> Acesso imediato</span>
+        <span><i class="ti ti-shield-check" aria-hidden="true"></i> Garantia de 7 dias</span>
+      </div>
+      <div class="calm-note"><i class="ti ti-heart-handshake" aria-hidden="true"></i><p><strong>Compre com calma.</strong> Se não for para você, é só pedir o reembolso em até 7 dias. Seu dinheiro volta inteiro, sem perguntas.</p></div>
+    </div>
+
+    <div class="mock" aria-hidden="true">
+      <div class="blob"></div>
+
+      <div class="page page-a">
+        <div class="tiny">Bônus · Lista</div>
+        <h5>Compras da semana</h5>
+        <div class="check-row"><span class="box on"></span> Aveia e frutas</div>
+        <div class="check-row"><span class="box on"></span> Ovos e frango</div>
+        <div class="check-row"><span class="box"></span> Legumes da estação</div>
+        <div class="check-row"><span class="box"></span> Iogurte natural</div>
+      </div>
+
+      <div class="cover">
+        <div class="c-tag">E-book · Guia de 30 dias</div>
+        <h3>Rotina <em>Leve</em></h3>
+        <div class="c-sub">Alimentação organizada, hábitos que ficam.</div>
+        <svg class="c-plate" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="62" fill="#F3ECDD"/>
+          <circle cx="70" cy="70" r="50" fill="#FBF8F1"/>
+          <path d="M70 70 L70 22 A48 48 0 0 1 114 84 Z" fill="#7DB36B"/>
+          <path d="M70 70 L114 84 A48 48 0 0 1 40 106 Z" fill="#E7B24C"/>
+          <path d="M70 70 L40 106 A48 48 0 0 1 70 22 Z" fill="#D9472B" opacity=".85"/>
+          <circle cx="70" cy="70" r="10" fill="#FBF8F1"/>
+        </svg>
+        <div class="c-foot"><span>+ 5 bônus</span><span class="c-badge">PDF</span></div>
+      </div>
+
+      <div class="page page-b">
+        <div class="tiny">Desafio · Dia 1</div>
+        <h5>Hoje eu vou…</h5>
+        <div class="check-row"><span class="box on"></span> Beber 6 copos de água</div>
+        <div class="check-row"><span class="box on"></span> Planejar o almoço</div>
+        <div class="check-row"><span class="box"></span> Caminhar 15 min</div>
+      </div>
+
+      <div class="sticker"><div><b>30</b>dias de<br>hábitos</div></div>
+      <div class="note hand">cabe na sua rotina <i class="ti ti-heart" aria-hidden="true"></i></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="marquee">
+   <div class="group">
+    <span><i class="ti ti-salad" aria-hidden="true"></i> Sem dietas restritivas</span>
+    <span><i class="ti ti-clock-hour-4" aria-hidden="true"></i> Receitas rápidas</span>
+    <span><i class="ti ti-pig-money" aria-hidden="true"></i> Ingredientes acessíveis</span>
+    <span><i class="ti ti-device-mobile" aria-hidden="true"></i> Leia no celular ou imprima</span>
+    <span><i class="ti ti-shopping-bag" aria-hidden="true"></i> Lista de compras pronta</span>
+    <span><i class="ti ti-heart" aria-hidden="true"></i> Sem culpa, sem radicalismo</span>
+   </div>
+   <div class="group" aria-hidden="true">
+    <span><i class="ti ti-salad" aria-hidden="true"></i> Sem dietas restritivas</span>
+    <span><i class="ti ti-clock-hour-4" aria-hidden="true"></i> Receitas rápidas</span>
+    <span><i class="ti ti-pig-money" aria-hidden="true"></i> Ingredientes acessíveis</span>
+    <span><i class="ti ti-device-mobile" aria-hidden="true"></i> Leia no celular ou imprima</span>
+    <span><i class="ti ti-shopping-bag" aria-hidden="true"></i> Lista de compras pronta</span>
+    <span><i class="ti ti-heart" aria-hidden="true"></i> Sem culpa, sem radicalismo</span>
+   </div>
+  </div>
+</div>
+
+<!-- PROBLEMA -->
+<section>
+  <svg class="deco deco-prob" aria-hidden="true"><use href="#branch"/></svg>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Você se identifica?</span>
+      <h2>Já tentou de tudo e <em>sempre volta</em> ao início?</h2>
+      <p>O problema quase nunca é falta de força de vontade. Falta um plano simples que funcione no meio da correria.</p>
+    </div>
+    <div class="pain">
+      <div class="pain-card reveal">
+        <div class="ic"><i class="ti ti-clock-exclamation" aria-hidden="true"></i></div>
+        <h4>Sem tempo para planejar</h4>
+        <p>A semana começa, a rotina aperta e a comida vira improviso de última hora.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="ic"><i class="ti ti-mood-sad" aria-hidden="true"></i></div>
+        <h4>Dietas que não duram</h4>
+        <p>Cortes radicais funcionam por alguns dias e depois desandam, junto com a motivação.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="ic"><i class="ti ti-shopping-cart-x" aria-hidden="true"></i></div>
+        <h4>Mercado sem lista</h4>
+        <p>Compras no impulso viram desperdício, gasto a mais e escolhas que você não queria.</p>
+      </div>
+    </div>
+    <p class="turn reveal"><span class="hand">A boa notícia?</span>Com organização, comer melhor fica mais fácil do que parece. É exatamente isso que o Rotina Leve ensina.</p>
+  </div>
+</section>
+
+
+<!-- GALERIA -->
+<div class="wave" style="background:#FBF8F1" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#F3ECDD"/></svg></div>
+<section class="bg-sand">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i> Comida de verdade</span>
+      <h2>Pratos <em>gostosos</em>, simples e do dia a dia</h2>
+      <p>Nada de ingrediente caro ou difícil de achar. É comida de mercado comum, organizada do jeito certo.</p>
+    </div>
+    <div class="gallery">
+      <figure class="ph big reveal"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=75" alt="Prato colorido com legumes, grãos e salada" loading="lazy"><figcaption><i class="ti ti-bowl" aria-hidden="true"></i> Pratos equilibrados</figcaption></figure>
+      <figure class="ph reveal"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=75" alt="Café da manhã com frutas, iogurte e aveia" loading="lazy"><figcaption><i class="ti ti-coffee" aria-hidden="true"></i> Cafés da manhã</figcaption></figure>
+      <figure class="ph reveal"><img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=75" alt="Tigela de salada fresca" loading="lazy"><figcaption><i class="ti ti-salad" aria-hidden="true"></i> Saladas práticas</figcaption></figure>
+      <figure class="ph wide reveal"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1000&q=75" alt="Frutas e legumes no mercado" loading="lazy"><figcaption><i class="ti ti-shopping-cart" aria-hidden="true"></i> Compras organizadas</figcaption></figure>
+    </div>
+    <div class="gal-note reveal"><span class="hand">tudo com ingredientes que você já conhece ✿</span></div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<div class="wave" style="background:#F3ECDD" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#17301F"/></svg></div>
+<section class="bg-dark">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Um método em <em>4 fases</em>, um passo por vez</h2>
+      <p>Cada semana tem um foco. Você não muda tudo de uma vez, e por isso consegue manter.</p>
+    </div>
+    <div class="phases">
+      <div class="phase reveal">
+        <div class="dot"><i class="ti ti-clipboard-list" aria-hidden="true"></i></div>
+        <div class="days">Dias 1 a 7</div>
+        <h4>Organização</h4>
+        <p>Ajuste a cozinha, planeje as compras e monte sua semana.</p>
+      </div>
+      <div class="phase reveal">
+        <div class="dot"><i class="ti ti-salad" aria-hidden="true"></i></div>
+        <div class="days">Dias 8 a 14</div>
+        <h4>Alimentação</h4>
+        <p>Aprenda a montar pratos equilibrados e a reconhecer a fome real.</p>
+      </div>
+      <div class="phase reveal">
+        <div class="dot"><i class="ti ti-walk" aria-hidden="true"></i></div>
+        <div class="days">Dias 15 a 21</div>
+        <h4>Movimento</h4>
+        <p>Inclua caminhada, mobilidade e exercícios leves no dia a dia.</p>
+      </div>
+      <div class="phase reveal">
+        <div class="dot"><i class="ti ti-repeat" aria-hidden="true"></i></div>
+        <div class="days">Dias 22 a 30</div>
+        <h4>Consolidação</h4>
+        <p>Transforme o que funcionou para você em hábito de verdade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#17301F" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#FBF8F1"/></svg></div>
+<!-- O QUE VOCÊ RECEBE -->
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">O que você recebe</span>
+      <h2>Tudo pronto, <em>sem enrolação</em></h2>
+    </div>
+    <div class="items">
+      <div class="item reveal"><div class="ic"><i class="ti ti-book-2" aria-hidden="true"></i></div><h4>15 capítulos</h4><p>Do porquê ao como fazer, em linguagem simples e direta.</p></div>
+      <div class="item reveal"><div class="ic"><i class="ti ti-calendar-event" aria-hidden="true"></i></div><h4>Cardápio-exemplo</h4><p>Modelo de semana com opções e substituições para adaptar ao seu gosto.</p></div>
+      <div class="item reveal"><div class="ic"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i></div><h4>20+ receitas práticas</h4><p>Cafés da manhã, almoços, jantares e lanches do dia a dia.</p></div>
+      <div class="item reveal"><div class="ic"><i class="ti ti-shopping-cart" aria-hidden="true"></i></div><h4>Lista de compras</h4><p>Organizada por categoria, pronta para levar ao mercado.</p></div>
+      <div class="item reveal"><div class="ic"><i class="ti ti-target-arrow" aria-hidden="true"></i></div><h4>Desafio de 30 dias</h4><p>Uma ação por dia, com espaço para marcar seu progresso.</p></div>
+      <div class="item reveal"><div class="ic"><i class="ti ti-run" aria-hidden="true"></i></div><h4>Exercícios para iniciantes</h4><p>Caminhada, mobilidade e força leve, no seu ritmo.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#FBF8F1" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#F3ECDD"/></svg></div>
+<!-- ESPIADA NO CONTEÚDO (substitui depoimentos até ter avaliações reais) -->
+<section class="bg-sand">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow"><i class="ti ti-eye" aria-hidden="true"></i> Por dentro do guia</span>
+      <h2>Veja um <em>pedacinho</em> do que te espera</h2>
+      <p>Páginas simples, bonitas e fáceis de seguir, no celular ou impressas.</p>
+    </div>
+    <div class="peek">
+      <div class="sheet reveal">
+        <div class="s-top"><span class="s-label">Cardápio-exemplo</span><span class="s-pill">Dia 1</span></div>
+        <h4>Um dia organizado</h4>
+        <div class="meal"><div class="m-ic"><i class="ti ti-coffee" aria-hidden="true"></i></div><div><b>Café da manhã</b><span>Pão integral com ovo mexido e uma fruta</span></div></div>
+        <div class="meal"><div class="m-ic"><i class="ti ti-bowl" aria-hidden="true"></i></div><div><b>Almoço</b><span>Arroz, feijão, frango grelhado e salada</span></div></div>
+        <div class="meal"><div class="m-ic"><i class="ti ti-apple" aria-hidden="true"></i></div><div><b>Lanche</b><span>Iogurte natural com banana e aveia</span></div></div>
+        <div class="meal"><div class="m-ic"><i class="ti ti-moon" aria-hidden="true"></i></div><div><b>Jantar</b><span>Omelete com legumes refogados</span></div></div>
+      </div>
+      <div class="sheet reveal">
+        <div class="r-photo"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=75" alt="Legumes frescos para a receita" loading="lazy"></div>
+        <div class="s-top"><span class="s-label">Receita</span><span class="s-pill">Fácil</span></div>
+        <h4>Frango grelhado com legumes</h4>
+        <div class="recipe-meta"><span><i class="ti ti-clock" aria-hidden="true"></i> 25 min</span><span><i class="ti ti-users" aria-hidden="true"></i> 2 porções</span></div>
+        <ul>
+          <li>Filé de frango temperado</li>
+          <li>Brócolis e cenoura</li>
+          <li>Alho, limão e ervas</li>
+          <li>Um fio de azeite</li>
+        </ul>
+      </div>
+      <div class="sheet reveal">
+        <div class="s-top"><span class="s-label">Checklist</span><span class="s-pill">Semana 1</span></div>
+        <h4>Meus hábitos</h4>
+        <div class="check-row"><span class="box on"></span> Planejei as refeições</div>
+        <div class="check-row"><span class="box on"></span> Fui ao mercado com lista</div>
+        <div class="check-row"><span class="box"></span> Bebi água ao longo do dia</div>
+        <div class="check-row"><span class="box"></span> Caminhei 3 vezes</div>
+        <div class="progress" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <p class="peek-note">Imagens ilustrativas de páginas do material.</p>
+  </div>
+</section>
+
+<div class="wave" style="background:#F3ECDD" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#17301F"/></svg></div>
+<!-- BÔNUS -->
+<section class="bg-dark">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow"><i class="ti ti-gift" aria-hidden="true"></i> Bônus inclusos</span>
+      <h2>Você ainda leva <em>5 materiais extras</em></h2>
+      <p>Tudo para imprimir ou usar direto no celular.</p>
+    </div>
+    <div class="bonus">
+      <div class="b-card reveal"><span class="b-num">01</span><div class="ic"><i class="ti ti-calendar-week" aria-hidden="true"></i></div><h4>Planner semanal</h4><p>Organize as refeições da semana</p></div>
+      <div class="b-card reveal"><span class="b-num">02</span><div class="ic"><i class="ti ti-list-check" aria-hidden="true"></i></div><h4>Lista imprimível</h4><p>Compras sem esquecer nada</p></div>
+      <div class="b-card reveal"><span class="b-num">03</span><div class="ic"><i class="ti ti-calendar-stats" aria-hidden="true"></i></div><h4>Calendário 30 dias</h4><p>Acompanhe seu progresso</p></div>
+      <div class="b-card reveal"><span class="b-num">04</span><div class="ic"><i class="ti ti-chef-hat" aria-hidden="true"></i></div><h4>Cartões de receitas</h4><p>Uma receita por cartão</p></div>
+      <div class="b-card reveal"><span class="b-num">05</span><div class="ic"><i class="ti ti-checkbox" aria-hidden="true"></i></div><h4>Checklist de hábitos</h4><p>Marque seus hábitos diários</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#17301F" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#FBF8F1"/></svg></div>
+<!-- PARA QUEM -->
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Transparência</span>
+      <h2>Este guia é <em>para você?</em></h2>
+    </div>
+    <div class="fit">
+      <div class="fit-card fit-yes reveal">
+        <h4><i class="ti ti-circle-check-filled" aria-hidden="true"></i> É para você se…</h4>
+        <ul>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Tem rotina corrida e dificuldade de se organizar</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Já tentou dietas restritivas e quer algo sustentável</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Quer ideias práticas de refeições e compras</li>
+          <li><i class="ti ti-check" aria-hidden="true"></i> Busca progresso gradual, sem radicalismo</li>
+        </ul>
+      </div>
+      <div class="fit-card fit-no reveal">
+        <h4><i class="ti ti-circle-x" aria-hidden="true"></i> Procure um profissional antes se…</h4>
+        <ul>
+          <li><i class="ti ti-point" aria-hidden="true"></i> Você é gestante ou lactante</li>
+          <li><i class="ti ti-point" aria-hidden="true"></i> É menor de idade</li>
+          <li><i class="ti ti-point" aria-hidden="true"></i> Tem doença diagnosticada ou usa medicação contínua</li>
+          <li><i class="ti ti-point" aria-hidden="true"></i> Tem histórico de transtorno alimentar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPRA SEGURA -->
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow"><i class="ti ti-lock" aria-hidden="true"></i> Sem surpresas</span>
+      <h2>Como funciona a <em>sua compra</em></h2>
+      <p>Tudo simples e transparente, do clique até o guia no seu celular.</p>
+    </div>
+    <div class="safe-steps">
+      <div class="safe-step reveal"><span class="n">1</span><div class="ic"><i class="ti ti-credit-card" aria-hidden="true"></i></div><h4>Você paga com segurança</h4><p>O pagamento é feito na Kiwify, uma das maiores plataformas de produtos digitais do Brasil. Pix ou cartão.</p></div>
+      <div class="safe-step reveal"><span class="n">2</span><div class="ic"><i class="ti ti-mail-opened" aria-hidden="true"></i></div><h4>Recebe na hora</h4><p>Assim que o pagamento é aprovado, o acesso chega no seu e-mail. Sem espera e sem cadastro complicado.</p></div>
+      <div class="safe-step reveal"><span class="n">3</span><div class="ic"><i class="ti ti-arrow-back-up" aria-hidden="true"></i></div><h4>Não gostou? Devolvemos</h4><p>Você tem 7 dias para ler com calma. Se não fizer sentido para você, o valor volta integralmente.</p></div>
+    </div>
+    <div class="shield-grid">
+      <div class="shield reveal"><i class="ti ti-shield-lock" aria-hidden="true"></i><div><b>Dados protegidos</b><span>Pagamento criptografado, feito pela Kiwify</span></div></div>
+      <div class="shield reveal"><i class="ti ti-repeat-off" aria-hidden="true"></i><div><b>Não é assinatura</b><span>Paga uma vez, sem cobrança todo mês</span></div></div>
+      <div class="shield reveal"><i class="ti ti-receipt" aria-hidden="true"></i><div><b>Comprovante no e-mail</b><span>Você recebe a confirmação da compra</span></div></div>
+      <div class="shield reveal"><i class="ti ti-message-circle-2" aria-hidden="true"></i><div><b>Suporte de verdade</b><span>Uma pessoa responde suas dúvidas</span></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#FBF8F1" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#F3ECDD"/></svg></div>
+<!-- OFERTA -->
+<section class="bg-sand" id="oferta">
+  <svg class="deco deco-offer" aria-hidden="true"><use href="#branch"/></svg>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Oferta</span>
+      <h2>Um valor justo, <em>sem risco</em></h2>
+    </div>
+    <div class="offer reveal">
+      <div class="offer-top">
+        <h3>Rotina Leve completo</h3>
+        <p>E-book + 5 bônus em PDF</p>
+      </div>
+      <div class="offer-body">
+        <ul class="stack">
+          <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i><div>Guia de 30 dias<small>15 capítulos + método em 4 fases</small></div></li>
+          <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i><div>Cardápio-exemplo + 20 receitas<small>Com substituições fáceis</small></div></li>
+          <li><i class="ti ti-circle-check-filled" aria-hidden="true"></i><div>Lista de compras + desafio diário<small>Prontos para usar</small></div></li>
+          <li><i class="ti ti-gift" aria-hidden="true"></i><div>5 bônus para imprimir<small>Planner, lista, calendário, receitas e checklist</small></div></li>
+        </ul>
+        <div class="price-box">
+          <div class="lbl">Pagamento único, sem mensalidade</div>
+          <div class="big"><sup>R$</sup>14,90</div>
+          <div class="per">Acesso imediato após a confirmação</div>
+        </div>
+        <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-cta btn-block checkout">Quero garantir meu acesso <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+        <div class="pay-icons">
+          <span><i class="ti ti-qrcode" aria-hidden="true"></i> Pix</span>
+          <span><i class="ti ti-credit-card" aria-hidden="true"></i> Cartão</span>
+          <span><i class="ti ti-lock" aria-hidden="true"></i> Ambiente seguro Kiwify</span>
+        </div>
+        <div class="reassure"><span><i class="ti ti-circle-check" aria-hidden="true"></i> Sem mensalidade</span><span><i class="ti ti-circle-check" aria-hidden="true"></i> Reembolso em até 7 dias</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="wave" style="background:#F3ECDD" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#FBF8F1"/></svg></div>
+<!-- GARANTIA -->
+<section>
+  <div class="wrap">
+    <div class="refund reveal">
+      <div class="seal"><div><b>7</b><small>dias de<br>garantia</small></div></div>
+      <div>
+        <h3>Seu dinheiro está <em>protegido</em></h3>
+        <p class="lead">Queremos que você compre em paz. Se por qualquer motivo o guia não for o que você esperava, você recebe 100% do valor de volta. Não precisa explicar nada.</p>
+        <ol>
+          <li>Abra o e-mail de confirmação da compra da Kiwify</li>
+          <li>Peça o reembolso por lá (ou fale com a gente pelo e-mail)</li>
+          <li>O valor volta pelo mesmo meio de pagamento</li>
+        </ol>
+        <div class="promise">sem letras miúdas, sem complicação ♡</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#FBF8F1" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#F3ECDD"/></svg></div>
+<!-- PESSOA REAL -->
+<section class="bg-sand" style="padding:72px 0">
+  <div class="wrap">
+    <div class="human reveal">
+      <div class="avatar"><i class="ti ti-leaf" aria-hidden="true"></i></div>
+      <h3>Ficou com alguma dúvida antes de comprar?</h3>
+      <p>Por trás do Rotina Leve tem uma pessoa de verdade, que lê e responde cada mensagem. Pergunte o que quiser, sem compromisso.</p>
+      <a class="mail" href="mailto:rotinaleve.guia30dias@gmail.com?subject=D%C3%BAvida%20sobre%20o%20Rotina%20Leve"><i class="ti ti-mail" aria-hidden="true"></i> rotinaleve.guia30dias@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#F3ECDD" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#FBF8F1"/></svg></div>
+<!-- FAQ -->
+<section>
+  <svg class="deco deco-faq" aria-hidden="true"><use href="#branch"/></svg>
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Dúvidas</span>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="faq">
+      <details><summary>Isso é uma dieta restritiva?</summary><p>Não. É um guia de organização e hábitos, com opções flexíveis e substituições para você adaptar ao seu gosto e ao seu bolso.</p></details>
+      <details><summary>Vou perder peso com certeza?</summary><p>Não existe garantia de resultado. Cada corpo responde de um jeito, e o material é um apoio para organizar sua rotina, não uma promessa.</p></details>
+      <details><summary>Como recebo o material?</summary><p>Logo após a confirmação do pagamento você recebe o acesso por e-mail, em PDF. Dá para ler no celular, no computador ou imprimir.</p></details>
+      <details><summary>Serve para vegetarianos?</summary><p>Sim. As receitas e o cardápio-exemplo trazem substituições sugeridas.</p></details>
+      <details><summary>Preciso de acompanhamento profissional?</summary><p>Recomendamos, principalmente se você tiver alguma condição de saúde. O guia é educativo e não substitui nutricionista ou médico.</p></details>
+      <details><summary>Quais as formas de pagamento?</summary><p>Pix e cartão de crédito, pelo checkout seguro da Kiwify.</p></details>
+      <details><summary>Como falo com o suporte?</summary><p>É só mandar um e-mail para <a href="mailto:rotinaleve.guia30dias@gmail.com">rotinaleve.guia30dias@gmail.com</a>. Respondemos o mais rápido possível.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Tudo bem! Você tem 7 dias para pedir o reembolso, sem precisar explicar o motivo. É só usar o e-mail de compra da Kiwify ou nos mandar uma mensagem. O valor volta pelo mesmo meio de pagamento.</p></details>
+      <details><summary>É seguro colocar meus dados?</summary><p>Sim. Nós não vemos nem guardamos os dados do seu cartão. O pagamento acontece inteiramente na Kiwify, em ambiente criptografado.</p></details>
+      <details><summary>Vou ser cobrado(a) todo mês?</summary><p>Não. É um pagamento único de R$ 14,90. Não é assinatura.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#FBF8F1" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#17301F"/></svg></div>
+<!-- CTA FINAL -->
+<section class="final">
+  <svg class="deco deco-final-l" aria-hidden="true"><use href="#branch"/></svg>
+  <svg class="deco deco-final-r" aria-hidden="true"><use href="#branch"/></svg>
+  <div class="wrap">
+    <h2 class="reveal">Sua rotina mais leve começa com <em>um próximo passo</em>.</h2>
+    <p class="reveal">Você não precisa de perfeição. Precisa de um plano simples que caiba no seu dia.</p>
+    <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-cta checkout reveal">Quero começar por R$ 14,90 <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
+    <div class="trust">
+      <span><i class="ti ti-lock" aria-hidden="true"></i> Compra segura</span>
+      <span><i class="ti ti-download" aria-hidden="true"></i> Acesso imediato</span>
+      <span><i class="ti ti-shield-check" aria-hidden="true"></i> Garantia de 7 dias</span>
+    </div>
+  </div>
+</section>
+
+<div class="wave" style="background:#17301F" aria-hidden="true"><svg viewBox="0 0 1440 64" preserveAspectRatio="none"><path d="M0 34C180 6 360 6 540 26s360 34 540 14 270-30 360-18V64H0z" fill="#FBF8F1"/></svg></div>
+<section style="padding:40px 0;background:var(--cream)">
+  <div class="wrap">
+    <div class="safety">
+      <i class="ti ti-alert-triangle" aria-hidden="true"></i>
+      <p><strong>Aviso importante:</strong> este material é educativo e não substitui a avaliação de nutricionista, médico ou outro profissional de saúde. Os resultados variam de pessoa para pessoa. Gestantes, lactantes, menores de idade e pessoas com condições de saúde ou histórico de transtornos alimentares devem buscar orientação profissional antes de seguir o material.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#2B5539"/><path d="M9 21c0-7 5-12 14-12 0 9-5 14-12 14l-2-2z" fill="#7DB36B"/><path d="M10 22c3-4 6-7 10-9" stroke="#2B5539" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+      Rotina <em>Leve</em>
+    </div>
+    <p>Material de caráter educativo. Não substitui acompanhamento médico ou nutricional.</p>
+    <p>Pagamento processado com segurança pela Kiwify · Suporte: <a href="mailto:rotinaleve.guia30dias@gmail.com">rotinaleve.guia30dias@gmail.com</a></p>
+    <p>© <span id="ano">2026</span> Rotina Leve. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<!-- Barra fixa de compra no celular -->
+<div class="mbar" id="mbar">
+  <div class="mp"><small>E-book + 5 bônus</small><strong>R$ 14,90</strong></div>
+  <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-cta checkout">Quero o guia</a>
+</div>
+
+<script>
+  // Repassa os UTMs da página (ex.: ?utm_source=Pinterest) para o checkout da Kiwify,
+  // assim você vê no painel de vendas de onde veio cada compra.
+  (function(){
+    var qs = window.location.search;
+    if (qs && qs.length > 1) {
+      document.querySelectorAll('a.checkout').forEach(function(a){
+        a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + qs.slice(1);
+      });
+    }
+  })();
+
+  // Ano automático no rodapé
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Barra de compra no celular aparece depois de passar do topo
+  (function(){
+    var bar = document.getElementById('mbar');
+    var hero = document.getElementById('topo');
+    var offer = document.getElementById('oferta');
+    function onScroll(){
+      var pastHero = hero.getBoundingClientRect().bottom < 0;
+      var r = offer.getBoundingClientRect();
+      var atOffer = r.top < window.innerHeight && r.bottom > 0;
+      bar.classList.toggle('show', pastHero && !atOffer);
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+
+  // Animação suave ao rolar
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      var d=0; entries.forEach(function(en){ if(en.isIntersecting){ en.target.style.transitionDelay=(d++*90)+'ms'; en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>
