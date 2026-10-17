@@ -296,6 +296,9 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
   .brand svg{width:24px;height:24px}
   .site-header .btn{padding:0 16px}
 }
+.recipe-controls{display:flex;align-items:center;gap:12px;margin:20px 0}
+.recipe-controls button{min-height:44px;min-width:44px;padding:8px 18px;border:1px solid var(--forest);border-radius:999px;background:var(--ivory);color:var(--forest);font:600 15px var(--sans);cursor:pointer}
+@media(min-width:768px){.recipe-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:22px;padding:4px 0 14px;scroll-padding-inline:0}.recipe{flex:0 0 calc((100% - 44px)/3)}}
 </style>
 </head>
 <body>
@@ -372,7 +375,12 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
       <h2 id="t-receitas">50 receitas com ingredientes de mercado comum.</h2>
       <p class="lede">20 no guia e 30 no livro de receitas bônus. Cada uma vem com modo de preparo, tempo e porções. Estas são algumas delas.</p>
     </div>
-    <ul class="recipe-grid" tabindex="0" aria-label="Receitas do guia, role para o lado para ver mais">
+    <div class="recipe-controls" hidden>
+      <button type="button" data-recipe-prev aria-label="Receita anterior" aria-controls="recipe-carousel">←</button>
+      <button type="button" data-recipe-toggle aria-controls="recipe-carousel">Pausar</button>
+      <button type="button" data-recipe-next aria-label="Próxima receita" aria-controls="recipe-carousel">→</button>
+    </div>
+    <ul id="recipe-carousel" class="recipe-grid" tabindex="0" aria-label="Receitas do guia, role para o lado para ver mais">
       <li class="recipe">
         <img src="img/receita-omelete.webp" width="640" height="800" loading="lazy" alt="Omelete dobrada recheada com tomate, cenoura e cebola, com cheiro-verde por cima, em prato de cerâmica">
         <p class="r-meta">10 min · 1 porção</p>
@@ -597,6 +605,37 @@ document.getElementById('ano').textContent=new Date().getFullYear();
     update();
   },{threshold:0});
   [hero,offer].forEach(function(el){if(el) io.observe(el)});
+})();
+/* Carrossel: respeita movimento reduzido e pausa durante a interação. */
+(function(){
+  var track=document.getElementById('recipe-carousel');
+  var controls=document.querySelector('.recipe-controls');
+  if(!track || !controls) return;
+  controls.hidden=false;
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  var playing=!reduce.matches, hovering=false, visible=false;
+  var toggle=controls.querySelector('[data-recipe-toggle]');
+  function label(){toggle.textContent=playing?'Pausar':'Reproduzir'}
+  function move(direction){
+    var card=track.querySelector('.recipe');
+    var step=card.getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap);
+    var max=track.scrollWidth-track.clientWidth;
+    if(max<2) return;
+    var target=track.scrollLeft+direction*step;
+    if(direction>0 && track.scrollLeft>=max-3) target=0;
+    if(direction<0 && track.scrollLeft<=3) target=max;
+    track.scrollTo({left:Math.max(0,Math.min(max,target)),behavior:reduce.matches?'instant':'smooth'});
+  }
+  toggle.addEventListener('click',function(){playing=!playing;label()});
+  controls.querySelector('[data-recipe-prev]').addEventListener('click',function(){playing=false;label();move(-1)});
+  controls.querySelector('[data-recipe-next]').addEventListener('click',function(){playing=false;label();move(1)});
+  track.addEventListener('pointerenter',function(){hovering=true});
+  track.addEventListener('pointerleave',function(){hovering=false});
+  track.addEventListener('touchstart',function(){playing=false;label()},{passive:true});
+  reduce.addEventListener('change',function(){if(reduce.matches){playing=false;label()}});
+  new IntersectionObserver(function(entries){visible=entries[0].isIntersecting},{threshold:0.25}).observe(track);
+  setInterval(function(){if(playing && visible && !hovering && !document.hidden && !document.getElementById('receitas').contains(document.activeElement)) move(1)},4000);
+  label();
 })();
 </script>
 </body>
