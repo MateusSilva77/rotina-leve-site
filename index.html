@@ -104,6 +104,7 @@ p{max-width:62ch;text-wrap:pretty}
 .price{display:flex;align-items:baseline;gap:10px}
 .price strong{font:600 38px/1 var(--serif);color:#fff;font-variant-numeric:lining-nums tabular-nums;letter-spacing:-.02em}
 .price span{font-size:15px;color:var(--on-dark-muted)}
+.price-note{margin-top:12px;font-size:14px;color:var(--on-dark-muted)}
 .hero-links{display:flex;flex-direction:column;gap:2px;margin-top:14px;font-size:15px;color:var(--on-dark-muted);list-style:none}
 .hero-links li{display:flex;align-items:center;gap:9px;min-height:30px}
 .hero-links svg{flex:none;color:var(--accent)}
@@ -296,10 +297,6 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
   .brand svg{width:24px;height:24px}
   .site-header .btn{padding:0 16px}
 }
-.recipe-photo{overflow:hidden;border-radius:10px}
-.recipe-photo img{transition:transform .35s ease}
-@media(hover:hover){.recipe-photo:hover img{transform:scale(1.06)}}
-@media(prefers-reduced-motion:reduce){.recipe-photo img{transition:none}}
 </style>
 </head>
 <body>
@@ -340,6 +337,7 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
         <a href="https://pay.kiwify.com.br/srVM8vz" class="btn btn-buy checkout">Comprar o guia</a>
         <div class="price"><strong>R$&nbsp;14,90</strong><span>pagamento único</span></div>
       </div>
+      <p class="price-note">Material educativo, sem promessa de emagrecimento.</p>
       <ul class="hero-links">
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6z"/></svg>Garantia de 7 dias</li>
         <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg>Acesso por e-mail após a confirmação</li>
@@ -376,40 +374,40 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
       <h2 id="t-receitas">50 receitas com ingredientes de mercado comum.</h2>
       <p class="lede">20 no guia e 30 no livro de receitas bônus. Cada uma vem com modo de preparo, tempo e porções. Estas são algumas delas.</p>
     </div>
-    <ul class="recipe-grid" tabindex="0" aria-label="Receitas do guia, role para o lado para ver mais">
+    <ul class="recipe-grid" tabindex="0" aria-label="Receitas do guia, use as setas do teclado para ver mais">
       <li class="recipe">
-        <div class="recipe-photo"><img src="img/receita-omelete.webp" width="640" height="800" loading="lazy" alt="Omelete dobrada recheada com tomate, cenoura e cebola, com cheiro-verde por cima, em prato de cerâmica"></div>
+        <img src="img/receita-omelete.webp" width="640" height="800" loading="lazy" alt="Omelete dobrada recheada com tomate, cenoura e cebola, com cheiro-verde por cima, em prato de cerâmica">
         <p class="r-meta">10 min · 1 porção</p>
         <h3>Omelete de legumes</h3>
         <p class="r-ing">Ovos, tomate, cenoura ralada, cebola e cheiro-verde.</p>
       </li>
       <li class="recipe">
-        <div class="recipe-photo"><img src="img/receita-bowl-frutas.webp" width="640" height="800" loading="lazy" alt="Tigela de iogurte natural com banana, mamão e maçã picados e aveia em flocos"></div>
+        <img src="img/receita-bowl-frutas.webp" width="640" height="800" loading="lazy" alt="Tigela de iogurte natural com banana, mamão e maçã picados e aveia em flocos">
         <p class="r-meta">5 min · 1 porção</p>
         <h3>Bowl de frutas com iogurte</h3>
         <p class="r-ing">Banana, mamão, maçã, iogurte natural e aveia.</p>
       </li>
       <li class="recipe">
-        <div class="recipe-photo"><img src="img/receita-vitamina.webp" width="640" height="800" loading="lazy" alt="Copo de vitamina de banana com aveia e canela por cima, ao lado de uma banana descascada"></div>
+        <img src="img/receita-vitamina.webp" width="640" height="800" loading="lazy" alt="Copo de vitamina de banana com aveia e canela por cima, ao lado de uma banana descascada">
         <p class="r-meta">5 min · 1 porção</p>
         <h3>Vitamina de banana e aveia</h3>
         <p class="r-ing">Banana, leite, aveia e canela opcional.</p>
       </li>
       <li class="recipe">
-        <div class="recipe-photo"><img src="img/receita-mingau.webp" width="640" height="800" loading="lazy" alt="Tigela de mingau de aveia com rodelas de banana, aveia e canela, com colher de madeira"></div>
+        <img src="img/receita-mingau.webp" width="640" height="800" loading="lazy" alt="Tigela de mingau de aveia com rodelas de banana, aveia e canela, com colher de madeira">
         <p class="r-meta">10 min · 1 porção</p>
         <h3>Mingau de aveia com banana</h3>
         <p class="r-ing">Aveia, leite, banana e canela.</p>
       </li>
       <li class="recipe">
-        <div class="recipe-photo"><img src="img/receita-salada-atum.webp" width="640" height="800" loading="lazy" alt="Tigela de salada com atum, alface, tomate, cenoura ralada, pepino e milho"></div>
+        <img src="img/receita-salada-atum.webp" width="640" height="800" loading="lazy" alt="Tigela de salada com atum, alface, tomate, cenoura ralada, pepino e milho">
         <p class="r-meta">10 min · 1 a 2 porções</p>
         <h3>Salada de atum</h3>
         <p class="r-ing">Atum, alface, tomate, cenoura, pepino e milho.</p>
       </li>
     </ul>
     <p class="swipe-hint" aria-hidden="true">Arraste para o lado para ver mais receitas.</p>
-    <p class="recipes-note">Fotos ilustrativas de receitas do guia. As páginas do PDF trazem o passo a passo em texto.</p>
+    <p class="recipes-note">Fotos de receitas do guia. No PDF, 19 das 20 receitas vêm com foto, ingredientes, modo de preparo, tempo e porções.</p>
   </div>
 </section>
 
@@ -420,14 +418,14 @@ dialog.viewer::backdrop{background:rgba(9,22,15,.88)}
       <h2 id="t-bonus">7 bônus para imprimir e usar na semana.</h2>
       <p class="lede">Planners, lista de compras, calendário, checklist, cartão e um mini livro com 30 receitas. São páginas reais do material, prontas para imprimir quantas vezes quiser.</p>
     </div>
-    <ul class="bonus-grid">
+    <ul class="bonus-grid" tabindex="0" aria-label="Bônus para imprimir, use as setas do teclado para ver mais">
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-planner.jpg" width="760" height="1075" loading="lazy" alt="Planner semanal de refeições em branco"></span><span class="shot-txt"><b>Planner semanal</b><small>Bônus 1</small></span></button></li>
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-lista.jpg" width="760" height="1075" loading="lazy" alt="Lista de compras imprimível por categoria"></span><span class="shot-txt"><b>Lista de compras</b><small>Bônus 2</small></span></button></li>
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-calendario.jpg" width="760" height="1075" loading="lazy" alt="Calendário de 30 dias para marcar"></span><span class="shot-txt"><b>Calendário de 30 dias</b><small>Bônus 3</small></span></button></li>
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-receitas-capa.jpg" width="760" height="1075" loading="lazy" alt="Capa do mini livro de receitas rápidas, com 30 receitas separadas por refeição"></span><span class="shot-txt"><b>Mini livro de receitas</b><small>Bônus 4, 30 receitas</small></span></button></li>
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-checklist.jpg" width="760" height="1075" loading="lazy" alt="Checklist semanal de hábitos"></span><span class="shot-txt"><b>Checklist de hábitos</b><small>Bônus 5</small></span></button></li>
       <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-organizacao.jpg" width="760" height="1075" loading="lazy" alt="Planner de organização da semana"></span><span class="shot-txt"><b>Planner de organização</b><small>Bônus 6</small></span></button></li>
-      <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-cartao.jpg" width="760" height="1075" loading="lazy" alt="Cartão de motivação para imprimir e recortar"></span><span class="shot-txt"><b>Cartão de motivação</b><small>Bônus extra</small></span></button></li>
+      <li><button class="shot-btn" type="button"><span class="shot-img"><img src="img/bonus-cartao.jpg" width="760" height="1075" loading="lazy" alt="Cartão de motivação para imprimir e recortar"></span><span class="shot-txt"><b>Cartão de motivação</b><small>Bônus 7</small></span></button></li>
       <li class="bonus-cta">
         <strong>Guia e 7 bônus por R$&nbsp;14,90.</strong>
         <p>Um único pagamento, sem mensalidade.</p>
